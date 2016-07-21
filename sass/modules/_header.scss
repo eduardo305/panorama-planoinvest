@@ -1,58 +1,190 @@
 @import "compass/css3";
 
-$background: gray;
+.pl-header-wrapper {
+  position: relative;
 
-body {
-  background: $background;
+  .pl-header-inner-wrapper {
+    position: relative;
+    @include display-flex;
+    @include flexbox((justify-content: space-between));
+    @include align-items(center);
+    background: black;
+    height: 80px;
+    padding: 10px;
 
+    a.pl-logo-link{
+      width: 69px;
+      height: 64px;
+      //background: #f0cd17;
+      margin-right: 20px;
+
+      img.pl-logo-image {
+        width: 69px;
+        height: 64px;
+      }
+    }
+
+    nav.pl-navbar {
+      @include flex(3);
+
+      ul {
+        text-transform: uppercase;
+        color: #eceff1;
+        font-family: sans-serif;
+
+        li {
+          display: inline-block;
+          margin-right: 20px;
+
+          a {
+            color: #eceff1;
+            font-family: sans-serif;
+            text-align: center;
+
+            &:hover {
+              color: gray;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    div.pl-auth-wrapper {
+      a {
+        border: 2px solid #eceff1;
+        padding: 10px;
+        @include border-radius(22px);
+        @include box-sizing(content-box);
+        color: #eceff1;
+        font-family: sans-serif;
+        text-align: center;
+        width: 60px;
+        display: block;
+
+        &:hover {
+          color: gray;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .pl-hamburguer-icon {
+      display: none;
+    }
+  }
+
+  .pl-mobile-nav {
+    display: none;
+  }
 }
 
-.pl-header-wrapper{
-  position: relative;
-  @include display-flex;
-  @include justify-content('space-between');
-  @include align-items(center);
-  background: black;
-  padding: 10px;
-  height: 99px;
 
-  a.pl-logo-link{
-    width: 96px;
-    height: 92px;
-    background: #f0cd17;
-    margin-right: 20px;
+
+@media only screen and (max-width: 621px) {
+
+  .pl-navbar, .pl-auth-wrapper {
+    display: none;
   }
 
-  nav.pl-navbar {
-    @include flex(3);
 
-    ul {
-      text-transform: uppercase;
-      color: #eceff1;
-      font-family: sans-serif;
+  .pl-header-wrapper {
 
-      li {
-        display: inline-block;
-        margin-right: 20px;
+    header {
+      .pl-header-inner-wrapper {
+        padding: 10px;
+
+        a.pl-logo-link {
+          padding: 0;
+          width: 69px;
+          height: 64px;
+
+          img.pl-logo-image {
+            width: 69px;
+            height: 64px;
+          }
+        }
+
+        .pl-hamburguer-icon {
+          display: block;
+          font-size: 30px;
+
+          span {
+            color: #eceff1;
+
+            &.hover {
+              text-decoration: none;
+              color: #eceff1;
+            }
+          }
+        }
+      }
+    }
+
+    .pl-mobile-nav {
+      position: absolute;
+      right: 0;
+
+      .pl-nav-items-wrapper {
+        height: 100vh;
+        background: gray;
+      }
+
+      @include display-flex;
+      @include flexbox((justify-content: flex-end));
+      @include transform(translate3d(200px,0,0));
+      background: white;
+      @include transition-property(all);
+      @include transition-duration(0.5s);
+      @include transition-timing-function(ease-in-out);
+
+      .pl-nav-item {
+        padding: 20px;
+        border-bottom: 1px solid #eceff1;
+        background: #263238;
+
+        a {
+          color: #eceff1;
+          font-size: 1em;
+
+          &.hover {
+            text-decoration: none;
+            color: black;
+          }
+        }
       }
     }
   }
 
-  div.pl-auth-wrapper {
-    a {
-      border: 2px solid #eceff1;
-      padding: 10px;
-      @include border-radius(22px);
-      color: #eceff1;
-      font-family: sans-serif;
+  div.pl-j-nav-visible {
 
-      &:hover {
-        color: gray;
-        text-decoration: none;
-        border-color: gray;
+
+
+    .pl-header-wrapper {
+
+      header {
+        .pl-header-inner-wrapper {
+
+          .pl-hamburguer-icon {
+            display: block;
+            font-size: 30px;
+
+            span {
+              color: #f0cd17;
+
+              &.hover {
+                text-decoration: none;
+                color: #eceff1;
+              }
+            }
+          }
+        }
+      }
+
+      .pl-mobile-nav {
+        @include transform(translate3d(0,0,0));
       }
     }
   }
-
-
 }

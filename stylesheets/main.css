@@ -1,57 +1,203 @@
-/* line 5, ../sass/modules/_header.scss */
+/* line 1, ../sass/layouts/_base.scss */
 body {
-  background: gray;
+  overflow-x: hidden;
 }
 
-/* line 10, ../sass/modules/_header.scss */
+/* line 5, ../sass/layouts/_base.scss */
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  overflow: hidden;
+}
+
+/* line 3, ../sass/modules/_header.scss */
 .pl-header-wrapper {
+  position: relative;
+}
+/* line 6, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper {
   position: relative;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: "space-between";
-  justify-content: "space-between";
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   -webkit-align-items: center;
   align-items: center;
   background: black;
+  height: 80px;
   padding: 10px;
-  height: 99px;
 }
-/* line 19, ../sass/modules/_header.scss */
-.pl-header-wrapper a.pl-logo-link {
-  width: 96px;
-  height: 92px;
-  background: #f0cd17;
+/* line 15, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper a.pl-logo-link {
+  width: 69px;
+  height: 64px;
   margin-right: 20px;
 }
-/* line 26, ../sass/modules/_header.scss */
-.pl-header-wrapper nav.pl-navbar {
+/* line 21, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper a.pl-logo-link img.pl-logo-image {
+  width: 69px;
+  height: 64px;
+}
+/* line 27, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper nav.pl-navbar {
   -webkit-flex: 3;
   flex: 3;
 }
-/* line 29, ../sass/modules/_header.scss */
-.pl-header-wrapper nav.pl-navbar ul {
+/* line 30, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper nav.pl-navbar ul {
   text-transform: uppercase;
   color: #eceff1;
   font-family: sans-serif;
 }
-/* line 34, ../sass/modules/_header.scss */
-.pl-header-wrapper nav.pl-navbar ul li {
+/* line 35, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper nav.pl-navbar ul li {
   display: inline-block;
   margin-right: 20px;
 }
-/* line 42, ../sass/modules/_header.scss */
-.pl-header-wrapper div.pl-auth-wrapper a {
+/* line 39, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper nav.pl-navbar ul li a {
+  color: #eceff1;
+  font-family: sans-serif;
+  text-align: center;
+}
+/* line 44, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper nav.pl-navbar ul li a:hover {
+  color: gray;
+  text-decoration: none;
+}
+/* line 54, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper div.pl-auth-wrapper a {
   border: 2px solid #eceff1;
   padding: 10px;
   -moz-border-radius: 22px;
   -webkit-border-radius: 22px;
   border-radius: 22px;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   color: #eceff1;
   font-family: sans-serif;
+  text-align: center;
+  width: 60px;
+  display: block;
 }
-/* line 49, ../sass/modules/_header.scss */
-.pl-header-wrapper div.pl-auth-wrapper a:hover {
+/* line 65, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper div.pl-auth-wrapper a:hover {
   color: gray;
   text-decoration: none;
-  border-color: gray;
+  cursor: pointer;
+}
+/* line 73, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-header-inner-wrapper .pl-hamburguer-icon {
+  display: none;
+}
+/* line 78, ../sass/modules/_header.scss */
+.pl-header-wrapper .pl-mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 621px) {
+  /* line 87, ../sass/modules/_header.scss */
+  .pl-navbar, .pl-auth-wrapper {
+    display: none;
+  }
+
+  /* line 95, ../sass/modules/_header.scss */
+  .pl-header-wrapper header .pl-header-inner-wrapper {
+    padding: 10px;
+  }
+  /* line 98, ../sass/modules/_header.scss */
+  .pl-header-wrapper header .pl-header-inner-wrapper a.pl-logo-link {
+    padding: 0;
+    width: 69px;
+    height: 64px;
+  }
+  /* line 103, ../sass/modules/_header.scss */
+  .pl-header-wrapper header .pl-header-inner-wrapper a.pl-logo-link img.pl-logo-image {
+    width: 69px;
+    height: 64px;
+  }
+  /* line 109, ../sass/modules/_header.scss */
+  .pl-header-wrapper header .pl-header-inner-wrapper .pl-hamburguer-icon {
+    display: block;
+    font-size: 30px;
+  }
+  /* line 113, ../sass/modules/_header.scss */
+  .pl-header-wrapper header .pl-header-inner-wrapper .pl-hamburguer-icon span {
+    color: #eceff1;
+  }
+  /* line 116, ../sass/modules/_header.scss */
+  .pl-header-wrapper header .pl-header-inner-wrapper .pl-hamburguer-icon span.hover {
+    text-decoration: none;
+    color: #eceff1;
+  }
+  /* line 125, ../sass/modules/_header.scss */
+  .pl-header-wrapper .pl-mobile-nav {
+    position: absolute;
+    right: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    -moz-transform: translate3d(200px, 0, 0);
+    -ms-transform: translate3d(200px, 0, 0);
+    -webkit-transform: translate3d(200px, 0, 0);
+    transform: translate3d(200px, 0, 0);
+    background: white;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+  }
+  /* line 129, ../sass/modules/_header.scss */
+  .pl-header-wrapper .pl-mobile-nav .pl-nav-items-wrapper {
+    height: 100vh;
+    background: gray;
+  }
+  /* line 142, ../sass/modules/_header.scss */
+  .pl-header-wrapper .pl-mobile-nav .pl-nav-item {
+    padding: 20px;
+    border-bottom: 1px solid #eceff1;
+    background: #263238;
+  }
+  /* line 147, ../sass/modules/_header.scss */
+  .pl-header-wrapper .pl-mobile-nav .pl-nav-item a {
+    color: #eceff1;
+    font-size: 1em;
+  }
+  /* line 151, ../sass/modules/_header.scss */
+  .pl-header-wrapper .pl-mobile-nav .pl-nav-item a.hover {
+    text-decoration: none;
+    color: black;
+  }
+
+  /* line 169, ../sass/modules/_header.scss */
+  div.pl-j-nav-visible .pl-header-wrapper header .pl-header-inner-wrapper .pl-hamburguer-icon {
+    display: block;
+    font-size: 30px;
+  }
+  /* line 173, ../sass/modules/_header.scss */
+  div.pl-j-nav-visible .pl-header-wrapper header .pl-header-inner-wrapper .pl-hamburguer-icon span {
+    color: #f0cd17;
+  }
+  /* line 176, ../sass/modules/_header.scss */
+  div.pl-j-nav-visible .pl-header-wrapper header .pl-header-inner-wrapper .pl-hamburguer-icon span.hover {
+    text-decoration: none;
+    color: #eceff1;
+  }
+  /* line 185, ../sass/modules/_header.scss */
+  div.pl-j-nav-visible .pl-header-wrapper .pl-mobile-nav {
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }

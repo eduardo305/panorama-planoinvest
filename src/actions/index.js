@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { AUTH_USER, AUTH_ERROR } from './types';
+import { AUTH_USER, AUTH_ERROR, TOGGLE_NAV } from './types';
 
 const ROOT_URL = 'http://api-planoinvest.herokuapp.com';
 
@@ -37,4 +37,10 @@ export function authError(error) {
     type: AUTH_ERROR,
     payload: error
   };
+}
+
+export function toggleNav() {
+  return {
+    type: TOGGLE_NAV
+  }
 }
