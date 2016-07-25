@@ -15,7 +15,6 @@
     a.pl-logo-link{
       width: 69px;
       height: 64px;
-      //background: #f0cd17;
       margin-right: 20px;
 
       img.pl-logo-image {
@@ -70,12 +69,12 @@
       }
     }
 
-    .pl-hamburguer-icon {
+    .bm-burger-button {
       display: none;
     }
   }
 
-  .pl-mobile-nav {
+  .bm-menu-wrap {
     display: none;
   }
 }
@@ -120,70 +119,71 @@
           }
         }
       }
-    }
 
-    .pl-mobile-nav {
-      position: absolute;
-      right: 0;
-
-      .pl-nav-items-wrapper {
-        height: 100vh;
-        background: gray;
+      .bm-menu-wrap {
+        display: block;
       }
 
-      @include display-flex;
-      @include flexbox((justify-content: flex-end));
-      @include transform(translate3d(200px,0,0));
-      background: white;
-      @include transition-property(all);
-      @include transition-duration(0.5s);
-      @include transition-timing-function(ease-in-out);
-
-      .pl-nav-item {
-        padding: 20px;
-        border-bottom: 1px solid #eceff1;
-        background: #263238;
-
-        a {
-          color: #eceff1;
-          font-size: 1em;
-
-          &.hover {
-            text-decoration: none;
-            color: black;
-          }
-        }
+      /* Position and sizing of burger button */
+      .bm-burger-button {
+        position: fixed;
+        width: 36px;
+        height: 30px;
+        left: 36px;
+        top: 26px;
+        left: initial;
+        right: 26px;
       }
-    }
-  }
 
-  div.pl-j-nav-visible {
+      /* Color/shape of burger icon bars */
+      .bm-burger-bars {
+        background: #eceff1;
+        height: 12% !important;
+      }
 
+      /* Position and sizing of clickable cross button */
+      .bm-cross-button {
+        height: 24px;
+        width: 24px;
+      }
 
+      /* Color/shape of close button cross */
+      .bm-cross {
+        background: #bdc3c7;
+      }
 
-    .pl-header-wrapper {
+      /* General sidebar styles */
+      .bm-menu {
+        background: #373a47;
+        padding: 2.5em 1.5em 0;
+        font-size: 1.15em;
 
-      header {
-        .pl-header-inner-wrapper {
-
-          .pl-hamburguer-icon {
-            display: block;
-            font-size: 30px;
-
-            span {
-              color: #f0cd17;
-
-              &.hover {
-                text-decoration: none;
-                color: #eceff1;
-              }
-            }
-          }
+        a.menu-item {
+          display: block;
+          outline: none;
+          padding: 0.8em;
+          color: #b8b7ad;
         }
       }
 
-      .pl-mobile-nav {
-        @include transform(translate3d(0,0,0));
+      /* Morph shape necessary with bubble or elastic */
+      .bm-morph-shape {
+        fill: #373a47;
+      }
+
+      /* Wrapper for item list */
+      .bm-item-list {
+        color: #b8b7ad;
+        padding: 0.8em;
+      }
+
+      /* Styling of overlay */
+      .bm-overlay {
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      .bm-cross-button {
+        display: none;
       }
     }
   }

@@ -2,20 +2,22 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
-import NavIcon from './nav/navIcon';
-import Nav from './nav/nav';
-import NavItem from './nav/navItem';
+const Menu = require('react-burger-menu').slide;
+
+//import NavIcon from './nav/navIcon';
+//import Nav from './nav/nav';
+//import NavItem from './nav/navItem';
 
 class Header extends Component {
 
   renderLinks() {
     if (this.props.authenticated) {
       return (
-        <Link to="/signout" key="1">sair</Link>
+        <Link to="/signout" className="menu-item" key="1">Sair</Link>
       );
     } else {
       return [
-        <Link to="/signin" key="2">entrar</Link>
+        <Link to="/signin" className="menu-item" key="2">Entrar</Link>
       ];
     }
   }
@@ -35,16 +37,14 @@ class Header extends Component {
             <div className="pl-auth-wrapper">
               { this.renderLinks() }
             </div>
-            <NavIcon />
           </div>
+          <Menu right>
+            <Link to="/" className="menu-item">Quem Somos</Link>
+            <Link to="/" className="menu-item">Panorama Matinal</Link>
+            { this.renderLinks() }
+          </Menu>
         </header>
-        <Nav ref="mobilenav">
-          <NavItem url="/">Quem Somos</NavItem>
-          <NavItem url="/">Panorama Matinal</NavItem>
-          <NavItem url={ this.props.authenticated ? '/signout' : '/signin' }>
-            { this.props.authenticated ? 'entrar' : 'sair' }
-          </NavItem>
-        </Nav>
+
       </div>
     );
   }
