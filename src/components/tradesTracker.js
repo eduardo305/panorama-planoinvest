@@ -19,7 +19,7 @@ class TradesTracker extends Component {
     return (
       <div className="row">
         <div className="col-xs-12">
-          <div className="box overflow-scroll">
+          <div className="box scrollable">
             <div className="box-header">
               <h3 className="box-title">Finalizados</h3>
             </div>

@@ -1,0 +1,35 @@
+[
+  {
+    "company": "Telefônica Vivo",
+    "stock": "VIVT4",
+    "buy": "27/jul",
+    "price": "R$ 47,55",
+    "stoploss": "R$ 45,90",
+    "goal": "R$ 49,00",
+    "sell": "28/jul",
+    "sellprice": "R$ 49,00",
+    "result": "+3,05%"
+  },
+  {
+    "company": "Frigorifico Minerva",
+    "stock": "BEEF3",
+    "buy": "276/jul",
+    "price": "R$ 9,40",
+    "stoploss": "R$ 9,10",
+    "goal": "R$ 9,80",
+    "sell": "27/jul",
+    "sellprice": "R$ 9,60",
+    "result": "+2,13%"
+  },
+  {
+    "company": "Telefônica Vivo",
+    "stock": "VIVT4",
+    "buy": "22/jul",
+    "price": "R$ 42,07",
+    "stoploss": "R$ 45,90",
+    "goal": "R$ 48,87",
+    "sell": "22/jul",
+    "sellprice": "R$ 47,60",
+    "result": "+1,13%"
+  }
+]
