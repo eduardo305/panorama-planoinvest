@@ -22,6 +22,7 @@
 
 .scrollable {
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .navbar-custom-menu {
