@@ -25,7 +25,8 @@ if (token) {
 ReactDOM.render(
   <Provider store={ store }>
     <Router history={browserHistory}>
-      <Route path="/panorama-planoinvest" component={App}>
+      // <Route path="/panorama-planoinvest" component={App}>
+      <Route path="/" component={App}>
         <IndexRoute component={Panorama} />
         <Route path="signin" component={Signin} />
         <Route path="signup" component={Signup} />
