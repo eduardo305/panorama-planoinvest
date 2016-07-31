@@ -21,12 +21,17 @@
 }
 
 .scrollable {
-  overflow: scroll;
+  overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
 .navbar-custom-menu {
   display: none;
+}
+
+#revenue-chart, #sales-chart {
+  position: relative;
+  height: 300px;
 }
 
 @media (max-width: 767px) {
